@@ -9,7 +9,7 @@ const HandleHTag = (props) => {
   switch (props.as) {
     case "h2":
       return `       
-      font-family:  ${themeContext.fonts.secondary}; 
+
       font-size:    ${themeContext.headerSizes.h2.fontSize};
       line-height:  ${themeContext.headerSizes.h2.lineHeight};
       color:        ${props.color || themeContext.headerSizes.h2.color};

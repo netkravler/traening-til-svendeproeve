@@ -11,7 +11,6 @@ import Inputs from "../Inputs/Inputs";
 import { StyledButton } from "../Buttons/StyledButton";
 
 import { Heading } from "../../Styles/Heading.Styled";
-import { StyledHeader } from "../Headers/StyledHeaders";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -59,7 +58,7 @@ const Login = () => {
     <>
       {!loggedIn && (
         <article>
-          <StyledHeader variant="h2">Login</StyledHeader>
+          <Heading variant="h2">Login</Heading>
           <p>Her kan du logge ind</p>
 
           <form onSubmit={LogMeIn}>
