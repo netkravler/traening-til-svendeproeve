@@ -30,7 +30,9 @@ const Users = () => {
 
   return (
     <Page title="brugere">
+      {/** Userslist renders the users based on what is rendered in the pagination component */}
       <UsersList />
+      {/** pass the state value to pagination component */}
       <Pagination items={users} />
     </Page>
   );

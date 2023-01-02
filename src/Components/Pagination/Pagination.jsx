@@ -9,18 +9,14 @@ import { usePaginationStore } from "./usePaginationStore";
 const Pagination = ({ items }) => {
   const { setPagination } = usePaginationStore();
 
-  const [apiData, setApiData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(10);
 
-  useEffect(() => {
-    setApiData(items);
-  }, [items]);
 
   // custom hook for pagnination
   // takes array you wish to paginate through and itemsperpage, and the current page
   // it returns a chunk of data at the index of the current page and the total number of pages.
-  const { state, numberOfPages  } = usePaginate(apiData, itemsPerPage, currentPage);
+  const { state, numberOfPages  } = usePaginate(items, itemsPerPage, currentPage);
 
   useEffect(() => {
     setPagination(state);
