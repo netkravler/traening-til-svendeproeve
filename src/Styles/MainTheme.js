@@ -1,6 +1,6 @@
 export const MainTheme = () => {
   const primary = "#4FC1FF";
-  const secondary = "#4FC1FF";
+  const secondary = "#4FC100";
   const tertiary = "#1E1E1E";
 
   return {
@@ -55,10 +55,10 @@ export const MainTheme = () => {
         },
       },
       ctaPrimary: {
-        backgroundColor: "pink",
+        backgroundColor: "deeppink",
         color: "#fff",
         "&:hover": {
-          backgroundColor: "deeppink",
+          backgroundColor: "pink",
         },
       },
       ctaSecondary: {

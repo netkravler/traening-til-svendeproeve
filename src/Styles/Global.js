@@ -10,7 +10,7 @@ export const GlobalStyles = createGlobalStyle`
   margin: 0;
   padding: 0;
 
-
+//border: solid 1px red;
 }
 
 html, body{
@@ -25,7 +25,7 @@ border: none;
   min-height: 100%;
     display: grid;  
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto 1fr auto;
+    grid-template-rows: auto 1fr auto;
 
 
 
@@ -40,10 +40,10 @@ body{
 }
 
 p, pre {
-  //font-family: ${({ theme }) => theme.fonts.primary};
+
   font-size : 2.17rem;
   color: ${({ theme }) => theme.colors.primary};
-  -webkit-font-smoothing: antialiased;
+
 }
 img{
   display: block;

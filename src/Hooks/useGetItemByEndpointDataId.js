@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import AppService from "../App/Appservices/Appservice";
 
-export const useGetListByEndpointData = (endpoint) => {
+export const useGetListByEndpointData = (endpoint, key) => {
   const [state, setState] = useState([]);
 
   useEffect(() => {
@@ -9,7 +9,7 @@ export const useGetListByEndpointData = (endpoint) => {
       const response = await AppService.GetList(endpoint);
       try {
         if (response.data) {
-          setState(response.data.items);
+          setState(response.data[key]);
         }
       } catch (error) {
         console.error(error);

@@ -11,12 +11,12 @@ export const ModalStyled = styled.div`
 
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  background-color: rgba(0, 0, 0, 0.7); /* Black w/ opacity */
 
   main {
     position: relative;
-    background-color:${({ theme }) => theme.colors.Surface};
-    color: ${({ theme }) => theme.colors.OnSurface};
+    background-color:${({ theme }) => theme.colors.background};
+    color: ${({ theme }) => theme.colors.onBackground};
     top: 50%;
     transform: translateY(-50%);
     padding: 40px;

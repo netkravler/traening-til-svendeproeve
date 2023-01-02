@@ -8,7 +8,7 @@ const FlashMessages = () => {
     flashMessages &&
     flashMessages.map((msg, i) => (
       <Flashmessage flashDuration={flashDuration} key={i}>
-        <div>{msg}</div>
+        <span>{msg}</span>
       </Flashmessage>
     ))
   );

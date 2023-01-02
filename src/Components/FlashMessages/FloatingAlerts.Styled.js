@@ -1,32 +1,32 @@
 import styled from "styled-components";
 
-export const Flashmessage = styled.span`
-  div {
-    display: block;
-    position: fixed;
-    z-index: 1200;
-    top: 38px;
-    left: 50%;
-    transform: translateX(-50%);
+export const Flashmessage = styled.div`
+  display: block;
+  position: fixed;
+  z-index: 1200;
+  top: 38px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  span {
     -moz-animation: floatingAlert ease-in ${(props) => props.flashDuration}ms forwards;
     -webkit-animation: floatingAlert ease-in ${(props) => props.flashDuration}ms forwards;
     -o-animation: floatingAlert ease-in ${(props) => props.flashDuration}ms forwards;
     animation: floatingAlert ease-in ${(props) => props.flashDuration}ms forwards;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
-    background-color: ${({ theme }) => theme.colors.Secondary};
-    color: ${({ theme }) => theme.colors.OnSecondary};
+    background-color: ${({ theme }) => theme.colors.secondary};
+    color: ${({ theme }) => theme.colors.onSecondary};
     padding: 10px 30px;
     border: solid 1px #333;
     border-radius: 5px;
     font-weight: 900;
     text-transform: uppercase;
-  
 
-  &:last-of-type {
-    display: block;
+    &:last-of-type {
+      display: block;
+    }
   }
-}
 
   @keyframes floatingAlert {
     0% {

@@ -11,10 +11,7 @@ export const StyledFooter = styled.footer`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   justify-content: center;
-  address {
-    font-style: normal;
-    font-family: ${({ theme }) => theme.fonts.primary};
-  }
+
 `;
 
 export const StyledFooterSection = styled.section`
