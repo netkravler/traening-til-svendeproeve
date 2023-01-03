@@ -4,6 +4,7 @@ export const MainTheme = () => {
   const tertiary = "#1E1E1E";
 
   return {
+    primary: primary,
     mainsettings: {
       containerPadding: "1rem",
       blockPadding: "1rem",

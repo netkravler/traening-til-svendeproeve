@@ -17,7 +17,7 @@ export const useGetListByEndpointData = (endpoint, key) => {
     };
 
     fetchApiData();
-  }, [endpoint]);
+  }, [endpoint, key]);
 
   return { state };
 };

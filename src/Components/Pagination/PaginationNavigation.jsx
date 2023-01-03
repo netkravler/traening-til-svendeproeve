@@ -9,9 +9,9 @@ const PaginationNavigation = ({ numberOfPages, itemsPerPage, setItemsPerPage, se
 
   return (
     <StyledPaginateSelector>
-      <select defaultValue={10} selected={itemsPerPage} onChange={handleOnchange}>
+      <select defaultValue={12} selected={itemsPerPage} onChange={handleOnchange}>
         <option disabled>Antal pr. side </option>
-        {[5, 10, 15, 20].map((item, i) => (
+        {[4, 8, 12, 16, 20].map((item, i) => (
           <option value={item} key={i}>
             {item}
           </option>

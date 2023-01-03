@@ -1,67 +1,13 @@
-import { useContext } from "react";
 import styled from "styled-components";
-import { ThemeContext } from "styled-components";
-import { isMobile } from "react-device-detect";
+import { color, variant } from "styled-system";
 
-const HandleHTag = (props) => {
-  const themeContext = useContext(ThemeContext);
-
-  switch (props.as) {
-    case "h2":
-      return `       
-
-      font-size:    ${themeContext.headerSizes.h2.fontSize};
-      line-height:  ${themeContext.headerSizes.h2.lineHeight};
-      color:        ${props.color || themeContext.headerSizes.h2.color};
-      `;
-
-    case "h3":
-      return `       
-
-      font-size:    ${themeContext.headerSizes.h3.fontSize};
-      line-height:  ${themeContext.headerSizes.h3.lineHeight};
-      color:        ${props.color || themeContext.headerSizes.h3.color};
-      `;
-
-    case "h4":
-      return `       
-
-      font-size:    ${themeContext.headerSizes.h4.fontSize};
-      line-height:  ${themeContext.headerSizes.h4.lineHeight};
-      color:        ${props.color || themeContext.headerSizes.h4.color};
-      `;
-
-    case "h5":
-      return `       
-
-      font-size:    ${themeContext.headerSizes.h5.fontSize};
-      line-height:  ${themeContext.headerSizes.h5.lineHeight};
-      color:        ${props.color || themeContext.headerSizes.h5.color};
-      `;
-
-    case "h6":
-      return `       
-
-      font-size:    ${themeContext.headerSizes.h6.fontSize};
-      line-height:  ${themeContext.headerSizes.h6.lineHeight};
-      color:        ${props.color || themeContext.headerSizes.h6.color};
-      `;
-
-    default:
-      return `
-      font-size:    ${themeContext.headerSizes.h1.fontSize}; 
-      line-height:  ${themeContext.headerSizes.h1.lineHeight};
-      color:        ${props.color || themeContext.headerSizes.h1.color};
-      `;
-  }
+const variants = {
+  h1: { color: "red", fontSize: "3em", lineHeight: "3rem" },
+  h2: { color: "green", fontSize: "2.2rem", lineHeight: "2.2rem" },
+  h3: { color: "blue", fontSize: "2rem" },
+  h4: { color: "teal", fontSize: "1.6669rem", fontWeight: 900 },
+  h5: { color: "purple", fontSize: "1.18rem" },
+  h6: { color: "lime", fontSize: ".9rem" },
 };
 
-export const Heading = styled.h1`
-  ${(props) => HandleHTag(props)};
-  margin: ${(props) => props.margin || null};
-  display: ${(props) => (props.invisible && !isMobile ? "none" : "block")};
-
-  padding: ${(props) => props.padding || null};
-  ${(props) => props.uc && "text-transform: uppercase;"}
-  ${(props) => props.tc && "text-align: center;"}
-`;
+export const Heading = styled.h1({}, variant({ variants, prop: "as" }), color);

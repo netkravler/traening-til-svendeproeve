@@ -1,15 +1,14 @@
 import React, { useState } from "react";
-import { StyledButton } from "../../Components/Buttons/StyledButton";
-import useFlashMessageStore from "../../Components/FlashMessages/useFlashMessageStore";
+
+
 import Inputs from "../../Components/Inputs/Inputs";
-import { useModalStore } from "../../Components/Modal/useModalStore";
+
 import Page from "../../Components/Partials/PageTemplate/Page";
 import { Heading } from "../../Styles/Heading.Styled";
-import Users from "../Users/Users";
+import { StyledButton } from "../../Styles/StyledComponents/StyledButton";
 
 export const Home = () => {
-  const { setModalPayload } = useModalStore();
-  const { setFlashMessage } = useFlashMessageStore();
+
 
   const initialTeam = { id: "", name: "" };
 
@@ -28,11 +27,11 @@ export const Home = () => {
       <Heading as="h3">Home</Heading>
       <Inputs type="text" name="name" value={name} onChange={handleChange} />
 
-      <StyledButton size="small" variant="secondary" onClick={() => setModalPayload(name)}>
-        vis mig brugere
+      <StyledButton variant="primary" >
+        Primary button
       </StyledButton>
-      <StyledButton variant="ctaPrimary" onClick={() => setFlashMessage(name)}>
-        Flash me
+      <StyledButton variant="ctaPrimary" >
+        ctaPrimary
       </StyledButton>
     </Page>
   );

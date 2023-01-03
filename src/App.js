@@ -1,7 +1,6 @@
 import { ThemeProvider } from "styled-components";
 import MainRouter from "./App/Routers/MainRouter";
-import FlashMessages from "./Components/FlashMessages/FlashMessages";
-import Modal from "./Components/Modal/Modal";
+
 
 import Header from "./Components/Partials/BurgerMenu/Header";
 import { Footer } from "./Components/Partials/Footer/Footer";
@@ -13,9 +12,6 @@ const App = () => {
     <>
       <ThemeProvider theme={MainTheme}>
         <GlobalStyles />
-        <Modal />
-        <FlashMessages />
-
         <Header />
         <MainRouter />
         <Footer />
